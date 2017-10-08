@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ITB Homepage</title>
+<link rel="icon" type="image/png" href="image/logo.png">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<header>
+		
+		<a href="index.html"><img src="image/logo.png" alt="logo" class="logo"></a>
+        
+<!-- Nav -->
+<nav class="utility">
+<ul>
+	<li><a href="index.html">Home</a></li>
+   	<li><a href="#">Contact</a></li>
+   	<li><a href="#">Location</a></li>
+   	<li><a href="#">Quick links</a></li>
+</ul>
+
+</nav>
+
+<nav class="mainnav">
+
+<ul>
+  	<li><a href="#">About</a></li>
+  	<li class="dropdown">
+    	<a href="#" class="dropbtn">Courses</a>
+    <div class="dropdown-content">
+      	<a href="postgraduate.html">Postgraduate</a>
+      	<a href="computing.html">Computing</a>
+      	<a href="bn120.html">BN120</a>
+    </div>
+  	</li>
+  	<li><a href="#">Campus & Student life</a></li>
+  	<li><a href="#">Research & Innovation</a></li>
+</ul>
+
+
+</nav>
+<!-- /Nav -->
+
+</header>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="image/graduation.jpg" alt="graduation" style="width:100%;">
+    <div class="text"><h1>2016 Open Days</h1><h2>ITB has over 2,500 students</h2></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="image/sport.jpg" alt="sport" style="width:100%;">
+    
+  </div>
+
+  <div class="mySlides fade">
+    <img src="image/graduation2.jpg" alt="graduation2" style="width:100%;">
+    
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+    
+<div class="content">
+
+<div class="col1"><img src="image/openevening3.jpg" alt="openevening"></div>
+
+<div class="col2"><img src="image/graduation20161.jpg" alt="graduation2016"></div>
+
+<div class="col2"><img src="image/bankholiday1.jpg" alt="bankholiday.jpg"></div>
+
+<div class="col2"><img src="image/bus1.jpg" alt="bus"></div>
+
+<div class="col3"><p>SHUTTLE BUS FEEDBACK :
+Should we alter our morning shuttle bus times (departing Coolmine Train station ) so they better match the train timetable ? 
+CHOOSE ANY ONE OPTION BELOW :
+1) Shuttle Bus departs 08.35 (better suits train arriving from City scheduled 08.27) 
+</p></div>
+
+<div class="col3"><p>
+Please note there'll be no access to campus buildings from close of business today Fri 28th Oct till morning Tues 1st Nov. 
+For Library Opening times during Reading Week, Our Restaurant will operate a limited service during Reading / Revision Week and will close at 2pm.</p></div>
+
+<div class="col3"><p>We now have details of your Graduation Day.</p></div>
+
+<div class="video"><iframe width="700" height="315" src="https://www.youtube.com/embed/RkcqAQ8pzkc" frameborder="0" allowfullscreen></iframe></div>
+
+<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2362.1335782875185!2d-6.3802318195976175!3d53.40474773548017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486712badd7cd6b1%3A0x9817ed5716c08592!2sInstitute+of+Technology+%2C+Blanchardstown!5e0!3m2!1sen!2sie!4v1479950306043" width="315" height="315" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+
+</div>
+
+
+<footer>
+<div class="sn"><a href="https://www.facebook.com/itbdublin/"><img src="image/facebook.png" alt="Facebook"/></a><a href="https://twitter.com/ITBdublin"><img src="image/twitter.png" alt="Twitter"/></a><a href="https://www.youtube.com/user/itbdublin"><img src="image/youtube.png" alt="youtube"/></a></div>
+    <p>Institute of Technology Blanchardstown,<br>Blanchardstown Road North,<br>Dublin 15, D15 YV78.<br><br><a href="#">Disclaimer</a>&nbsp;|&nbsp;<a href="#">Accessibility</a>&nbsp;|&nbsp;<a href="#">Sitemap</a>&nbsp;|&nbsp;<a href="#">Cookie Policy</a></p>
+</footer>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
